@@ -1,17 +1,16 @@
 %_________________________________________________________________________
-%  Memory Backtracking Strategy source code (Developed in MATLAB R2023a)
+%  Guided Learning Strategy source code (Developed in MATLAB R2023a)
 %
 %  programming: Heming Jia & Chenghao Lu
 %
 % paper:
-%  Heming Jia, Chenghao Lu, Zhikai Xing,
-%  Memory backtracking strategy:an evolutionary updating mechanism for meta-heuristic algorithms
+%  Heming Jia, Chenghao Lu,
+%  Guided learning strategy: A novel update mechanism for metaheuristic algorithms design and improvement
 %  
 %  DOI:
 %  
 %  E-mails: jiaheming@fjsmu.edu.cn           (Heming Jia)
 %           20210868203@fjsmu.edu.cn         (Chenghao Lu)
-%           xingzk@whu.edu.cn                (Zhikai Xing) 
 %_________________________________________________________________________
 
 % --------------------------------------------
@@ -35,7 +34,7 @@ Function_name='F1';
 
 maxFEs=dim*10000; % Maximum number of evaluations
 
-[gbestval,gbest,Conv]=MBS_MPA(N,maxFEs,lb.*ones(1,dim),ub.*ones(1,dim),dim,fobj);
+[gbestval,gbest,Conv]=GLS_MPA(N,maxFEs,lb.*ones(1,dim),ub.*ones(1,dim),dim,fobj);
 
 % Convergence curve
 semilogy(Conv,'Color','r')
@@ -44,6 +43,6 @@ xlabel('Iteration');
 ylabel('Best score obtained so far');
 
 
-display(['The best solution obtained by MBS_MPA is : ', num2str(gbest,10)]);
-display(['The best optimal value of the objective function found by MBS_MPA is : ', num2str(gbestval,10)]);
+display(['The best solution obtained by GLS_MPA is : ', num2str(gbest,10)]);
+display(['The best optimal value of the objective function found by GLS_MPA is : ', num2str(gbestval,10)]);
 disp('--------------------------------------');
