@@ -56,6 +56,7 @@ FES=0;
 C=0;
 Cmax=2500;
 St=zeros(Cmax,dim);
+B=200./(ub-lb);
 %% GLS initialization ended
 
 while 1
@@ -80,7 +81,7 @@ while 1
         C=C+1;
         St(C,:)=Prey(i,:);
         if C>=Cmax
-            V0=std(St,0,1);
+            V0=std(St,0,1).*B;
             C=0;
             FESold=FES;
             [gbest,gbestval,Prey,fitness,FES]=GLS(gbest,gbestval,Prey,fitness,lu,V0,A,fobj,FES,FESmax,i);
@@ -156,7 +157,7 @@ while 1
         C=C+1;
         St(C,:)=Prey(i,:);
         if C>=Cmax
-            V0=std(St,0,1);
+            V0=std(St,0,1).*B;
             C=0;
             FESold=FES;
             [gbest,gbestval,Prey,fitness,FES]=GLS(gbest,gbestval,Prey,fitness,lu,V0,A,fobj,FES,FESmax,i);
