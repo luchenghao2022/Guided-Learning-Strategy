@@ -7,7 +7,7 @@
 %  Heming Jia, Chenghao Lu,
 %  Guided learning strategy: A novel update mechanism for metaheuristic algorithms design and improvement
 %  
-%  DOI:
+%  DOI: doi.org/10.1016/j.knosys.2024.111402
 %  
 %  E-mails: jiaheming@fjsmu.edu.cn           (Heming Jia)
 %           20210868203@fjsmu.edu.cn         (Chenghao Lu)
